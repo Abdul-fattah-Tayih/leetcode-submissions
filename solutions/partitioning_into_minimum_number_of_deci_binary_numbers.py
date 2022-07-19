@@ -1,4 +1,4 @@
-class Solution:
+class PartitioningIntoMinimumNumberOfDeciBinaryNumbers:
     def min_partitions(self, n: str) -> int:
         """
             The minimum number of partitions is equals to the largest digit in the number
@@ -29,7 +29,8 @@ class Solution:
 
         return len(numbers_to_add)
 
-solution = Solution()
-print(f'should be: 3, actual {solution.min_partitions("32")}')
-print(f'should be: 8, actual {solution.min_partitions("82734")}')
-print(f'should be: 9, actual {solution.min_partitions("27346209830709182346")}')
+if __name__ == '__main__':
+    solution = PartitioningIntoMinimumNumberOfDeciBinaryNumbers()
+    print(f'should be: 3, actual {solution.min_partitions("32")}')
+    print(f'should be: 8, actual {solution.min_partitions("82734")}')
+    print(f'should be: 9, actual {solution.min_partitions("27346209830709182346")}')

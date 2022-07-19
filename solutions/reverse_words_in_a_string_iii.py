@@ -1,4 +1,4 @@
-class Solution:
+class ReverseWordsInAStringThree:
     def reverseWords(self, s: str) -> str:
         current_word = ""
         reversed_string = ""
@@ -22,10 +22,10 @@ class Solution:
 
         ''.join(result)
 
+if __name__ == '__main__':
+    solution = ReverseWordsInAStringThree()
+    result = solution.reverseWords("Let's take LeetCode contest")
+    print(result)
 
-solution = Solution()
-result = solution.reverseWords("Let's take LeetCode contest")
-print(result)
-
-result = solution.reverseWords("God Ding")
-print(result)
+    result = solution.reverseWords("God Ding")
+    print(result)

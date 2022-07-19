@@ -1,7 +1,7 @@
-from asyncio import current_task
 from typing import List
+import unittest
 
-class Solution:
+class MaximumPointsYouCanObtainFromCards:
     def max_score(self, card_points: List[int], k: int) -> int:
         """
             Fixed sliding window, but instead of calculating inside the window, we calculate on either side of the window
@@ -49,10 +49,6 @@ class Solution:
             max_sum = max(max_sum, current_sum)
         
         return max_sum
-                
-solution = Solution()
-print('should be 12, actual: ' + str(solution.max_score([1,2,3,4,5,6,1], k = 3)))
-print('should be 4, actual: ' + str(solution.max_score([2,2,2], 2)))
-print('should be 55, actual: ' + str(solution.max_score([9,7,7,9,7,7,9], 7)))
-print('should be 8, actual: ' + str(solution.max_score([1,2,5,4,2,1], 3)))
-print('should be 232, actual: ' + str(solution.max_score([11,49,100,20,86,29,72], 4)))
+
+if __name__ == '__main__':
+    test_runner = unittest.main('tests.test_maximum_points_you_can_obtain_from_cards', exit=False)

@@ -1,7 +1,8 @@
 from typing import List
-from colorama import Fore
+import unittest
 
-class Solution:
+
+class PascalsTriangle:
     def generate(self, numRows: int) -> List[List[int]]:
         triangle = []
         for row in range(numRows):
@@ -19,17 +20,5 @@ class Solution:
 
         return triangle[row - 1][column] + triangle[row - 1][column - 1]
 
-solution = Solution()
-
-cases = {
-    5: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]],
-    4: [[1],[1,1],[1,2,1],[1,3,3,1]],
-    1: [[1]],
-}
-
-for case, expected_result in cases.items():
-    actual_result = solution.generate(case)
-    if (actual_result != expected_result):
-        print(f'{Fore.RED} x failed test, input: {case}')
-    else:
-        print(f'{Fore.GREEN} passed!')
+if __name__ == '__main__':
+    test = unittest.main('tests.test_pascals_triangle', exit=False)

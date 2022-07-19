@@ -1,4 +1,4 @@
-class Solution(object):
+class MoveZeroes(object):
     def moveZeroes(self, nums):
         """
         :type nums: List[int]
@@ -39,7 +39,8 @@ class Solution(object):
         nums = moved_array
         return moved_array
 
-solution = Solution()
-result = solution.moveZeroes([0,1,0,3,12])
-result = solution.moveZeroes([0])
-result = solution.moveZeroes([1,4,0,3,0])
+if __name__ == '__main__':
+    solution = MoveZeroes()
+    result = solution.moveZeroes([0,1,0,3,12])
+    result = solution.moveZeroes([0])
+    result = solution.moveZeroes([1,4,0,3,0])

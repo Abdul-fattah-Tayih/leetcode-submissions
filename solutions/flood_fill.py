@@ -1,7 +1,6 @@
-from textwrap import fill
 from typing import List
 
-class Solution:
+class FloodFill:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int):
         old_color = image[sr][sc]
         # check if old_color is already painted
@@ -26,26 +25,27 @@ class Solution:
         self.dfs(image, r, c-1, color, new_color)
 
         
-solution = Solution()
-print(solution.floodFill(
-    [
-        [1, 1, 1],
-        [1, 1, 0],
-        [1, 0, 1],
-    ], 
-    1, 
-    1, 
-    2
-))
-
-print(
-    solution.floodFill(
+if __name__ == '__main__':
+    solution = FloodFill()
+    print(solution.floodFill(
         [
-            [0,0,0],
-            [1,0,0]
-        ],
-        1,
-        1,
+            [1, 1, 1],
+            [1, 1, 0],
+            [1, 0, 1],
+        ], 
+        1, 
+        1, 
         2
+    ))
+
+    print(
+        solution.floodFill(
+            [
+                [0,0,0],
+                [1,0,0]
+            ],
+            1,
+            1,
+            2
+        )
     )
-)

@@ -1,4 +1,4 @@
-class Solution:
+class LongestRepeatingCharactersWithoutRepeatingCharacters:
     def lengthOfLongestSubstring(self, s: str) -> int:
         if len(s) <= 1: return len(s)
         max_substring_length, current_substring_length = 0, 1
@@ -21,7 +21,8 @@ class Solution:
 
         return max_substring_length
 
-solution = Solution()
-print(solution.lengthOfLongestSubstring("abcabcbb"))
-print(solution.lengthOfLongestSubstring("bbbbb"))
-print(solution.lengthOfLongestSubstring("pwwkew"))
+if __name__ == '__main__':
+    solution = LongestRepeatingCharactersWithoutRepeatingCharacters()
+    print(solution.lengthOfLongestSubstring("abcabcbb"))
+    print(solution.lengthOfLongestSubstring("bbbbb"))
+    print(solution.lengthOfLongestSubstring("pwwkew"))

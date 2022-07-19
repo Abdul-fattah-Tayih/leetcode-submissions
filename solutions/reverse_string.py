@@ -1,4 +1,4 @@
-class Solution(object):
+class ReverseString(object):
     def reverseString(self, s):
         """
         :type s: List[str]
@@ -16,6 +16,7 @@ class Solution(object):
 
         return s
         
-solution = Solution()
-print(solution.reverseString(["h","e","l","l","o"]))
-print(solution.reverseString(["H","a","n","n","a","h"]))
+if __name__ == '__main__':
+    solution = ReverseString()
+    print(solution.reverseString(["h","e","l","l","o"]))
+    print(solution.reverseString(["H","a","n","n","a","h"]))

@@ -1,4 +1,4 @@
-class Solution(object):
+class TwoSumTwoSortedArray(object):
     def twoSum(self, numbers, target):
         """
         :type numbers: List[int]
@@ -35,13 +35,14 @@ class Solution(object):
                 right -= 1
             else:
                 left += 1
-        
-solution = Solution()
-result = solution.twoSumWithTwoPointers([2,7,11,15], 9)
-print(result)
-result = solution.twoSumWithTwoPointers([2,3,4], 6)
-print(result)
-result = solution.twoSumWithTwoPointers([-1,0], -1)
-print(result)
-result = solution.twoSumWithTwoPointers([0,0,3,4], 0)
-print(result)
+
+if __name__ == '__main__':
+    solution = TwoSumTwoSortedArray()
+    result = solution.twoSumWithTwoPointers([2,7,11,15], 9)
+    print(result)
+    result = solution.twoSumWithTwoPointers([2,3,4], 6)
+    print(result)
+    result = solution.twoSumWithTwoPointers([-1,0], -1)
+    print(result)
+    result = solution.twoSumWithTwoPointers([0,0,3,4], 0)
+    print(result)
