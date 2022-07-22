@@ -3,7 +3,8 @@ from typing import List, Optional
 # Definition for singly-linked list.
 class ListNode:
     """
-        Generic singly linked list implementation in leetcode, also has some quality of life methods like implementing __str__ and __eq__, as well as a static method to generate a linked list for a normal list
+        Generic singly linked list implementation in leetcode, also has some quality of life methods 
+        like implementing __str__ and __eq__, as well as a static method to generate a linked list for a normal list
     """
     def __init__(self, val: int = 0, next: Optional['ListNode'] = None):
         self.val = val
