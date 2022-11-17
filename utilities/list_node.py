@@ -39,6 +39,17 @@ class ListNode:
             object_current = object_current.next
 
         return True
+
+    def get_last_node(self) -> 'ListNode':
+        current = self
+
+        while current is not None:
+            if current.next is None:
+                return current
+
+            current = current.next
+        
+        return current
     
     @classmethod
     def generate_from_list(cls, list: List) -> Optional['ListNode']:
