@@ -33,3 +33,9 @@ class ValidAnagram:
             t_dict[char] = t_dict.get(char, 0) + 1
             
         return s_dict == t_dict
+
+if __name__ == '__main__':
+    obj = ValidAnagram()
+
+    assert obj.isAnagram(s = "anagram", t = "nagaram") == True
+    assert obj.isAnagram(s = "rat", t = "car") == False
