@@ -25,6 +25,8 @@ class LetterCombinationsOfAPhoneNumber:
 
     def letter_combinations_brute_force(self, digits: str) -> List[str]:
         """
+            O(n*v) BFS
+
             I have absolutely no idea how this is accepted!
 
             What I did here is I create a deque (this is because I want delete operations at the left to be O(1))

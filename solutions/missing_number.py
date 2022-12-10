@@ -27,3 +27,15 @@ class MissingNumber:
                 return num
             
         return -1
+
+    def missing_number_optimal(self, nums: List[int]) -> int:
+        """
+            Instead of storing, we can just sum the numbers from 1 to n using formula sum = n*(n+1) / 2
+
+            and subtract it from the sum of the list, which will be O(n) time but O(1) space
+        """
+
+        n = len(nums)
+        n_sum = n * (n + 1) // 2
+
+        return n_sum - sum(nums)

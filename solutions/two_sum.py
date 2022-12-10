@@ -12,7 +12,9 @@ class TwoSum:
     """
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         """
-            O(n)
+            Time: O(n)
+
+            Space: O(n)
 
             We use a hash map to store all values as the keys and their indices as the values
 
@@ -22,6 +24,7 @@ class TwoSum:
 
             https://leetcode.com/submissions/detail/851187347/
         """
+        # set the size at the start if possible to avoid o(n^2) due to copying
         number_indices = {value: index for index, value in enumerate(nums)}
         
         for index, num in enumerate(nums):
