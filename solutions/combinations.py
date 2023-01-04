@@ -28,12 +28,16 @@ class Combinations:
             https://leetcode.com/problems/combinations/submissions/863909903/
         """
         if len(current_combination) == combination_length:
-            combinations.append(current_combination)
+            combinations.append(current_combination.copy())
             return combinations
 
         for number in list(remaining_numbers):
+            # for efficiency, we avoid .copy() and + [list] as much possible, we do the result of that manually
             remaining_numbers.remove(number)
-            self.combine_recursively(remaining_numbers.copy(), combination_length, current_combination + [number], combinations)
+            current_combination.append(number)
+            self.combine_recursively(remaining_numbers, combination_length, current_combination, combinations)
+            current_combination.pop()
+            remaining_numbers.add(number)
 
         return combinations
 
