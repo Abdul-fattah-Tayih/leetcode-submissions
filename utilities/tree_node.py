@@ -6,3 +6,6 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+    def __repr__(self) -> str:
+        return f'{getattr(self.left, "data") or "None"} <- {self.data} -> {getattr(self.right, "data") or "None"}'
