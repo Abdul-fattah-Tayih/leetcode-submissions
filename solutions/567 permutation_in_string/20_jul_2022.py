@@ -1,4 +1,4 @@
-class PermutationInString:
+class PermutationInString20Jul2022:
     def checkInclusion(self, s1: str, s2: str) -> bool:
         if len(s1) > len(s2): return False
         first_string_chars = {}
@@ -22,9 +22,11 @@ class PermutationInString:
                 return True
 
         return False
+    
+
 
 if __name__ == '__main__':
-    solution = PermutationInString()
+    solution = PermutationInString20Jul2022()
     print(solution.checkInclusion("ab", "eidbaooo"))
     print(solution.checkInclusion("ab", "eidboaoo"))
     print(solution.checkInclusion("a", "ab"))
